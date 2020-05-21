@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FaFaFa"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".vistas.Principal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/imageButtonQR"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/fondo_principal"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/qrcodescan" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:gravity="center_horizontal"
+            android:text="Escanea la etiqueta" />
+
+        <ImageButton
+            android:id="@+id/imageButtonGrid"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/fondo_principal"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/grid_amarillo" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center_horizontal"
+            android:text="Elige los símbolos" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewPrenda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:onClick="onClick"
+        android:text="¿Prefieres seleccionar una prenda?"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:fontFamily="@font/allerta" />
+</LinearLayout>

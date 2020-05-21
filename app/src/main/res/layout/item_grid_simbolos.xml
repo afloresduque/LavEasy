@@ -1,0 +1,1906 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="Lavado"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp" />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <ImageView
+                    android:id="@+id/imlav1"
+                    android:layout_width="65dp"
+                    android:layout_height="60dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/lav1"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav2"
+                    android:layout_width="65dp"
+                    android:layout_height="60dp"
+                    android:layout_row="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/lav2"
+                    android:textOn="" />
+
+                <ImageView
+                    android:id="@+id/imlav3"
+                    android:layout_width="65dp"
+                    android:layout_height="60dp"
+                    android:layout_row="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/lav3"
+                    android:textOn="" />
+
+                <RadioGroup
+                    android:id="@+id/rglav1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:onClick="onClick"
+                        android:buttonTint="@color/colorPrimary"/>
+
+                    <RadioButton
+                        android:id="@+id/rblav2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="center|center_horizontal|left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:buttonTint="@color/colorPrimary"/>
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imlav4"
+                    android:layout_width="65dp"
+                    android:layout_height="60dp"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/lav4"
+                    android:textOn="" />
+
+                <ImageView
+                    android:id="@+id/imlav5"
+                    android:layout_width="65dp"
+                    android:layout_height="60dp"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/lav5"
+                    android:textOn="" />
+
+                <ImageView
+                    android:id="@+id/imlav6"
+                    android:layout_width="65dp"
+                    android:layout_height="60dp"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/lav6"
+                    android:textOn="" />
+
+                <RadioGroup
+                    android:id="@+id/rglav2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:buttonTint="@color/colorPrimary"/>
+
+                    <RadioButton
+                        android:id="@+id/rblav5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:buttonTint="@color/colorPrimary"/>
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imlav7"
+                    android:layout_width="65dp"
+                    android:layout_height="60dp"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/lav7"
+                    android:textOn="" />
+
+                <ImageView
+                    android:id="@+id/imlav8"
+                    android:layout_width="65dp"
+                    android:layout_height="60dp"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/lav8"
+                    android:textOn="" />
+
+                <ImageView
+                    android:id="@+id/imlav9"
+                    android:layout_width="65dp"
+                    android:layout_height="60dp"
+                    android:layout_row="2"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/lav9"
+                    android:textOn="" />
+
+                <RadioGroup
+                    android:id="@+id/rglav3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:foregroundGravity="left"
+                        android:gravity="left"
+                        android:buttonTint="@color/colorPrimary"/>
+
+                    <RadioButton
+                        android:id="@+id/rblav8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:gravity="left"
+                        android:buttonTint="@color/colorPrimary"/>
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imlav10"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav10"
+                    android:textOn="" />
+
+                <ImageView
+                    android:id="@+id/imlav11"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="3"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav11"
+                    android:textOn="" />
+
+                <ImageView
+                    android:id="@+id/imlav12"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="3"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav12"
+                    android:textOn="" />
+
+                <RadioGroup
+                    android:id="@+id/rglav4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:foregroundGravity="left"
+                        android:gravity="left"
+                        android:buttonTint="@color/colorPrimary"/>
+
+                    <RadioButton
+                        android:id="@+id/rblav11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:gravity="left"
+                        android:buttonTint="@color/colorPrimary"/>
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imlav13"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="4"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav13"
+                    android:textOn="" />
+
+                <ImageView
+                    android:id="@+id/imlav14"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="4"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/lav14"
+                    android:textOn="" />
+
+                <ImageView
+                    android:id="@+id/imlav15"
+                    android:layout_width="65dp"
+                    android:layout_height="60dp"
+                    android:layout_row="4"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/lav15"
+                    android:textOn="" />
+
+                <RadioGroup
+                    android:id="@+id/rglav5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="4"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:foregroundGravity="left"
+                        android:gravity="left"
+                        android:buttonTint="@color/colorPrimary"/>
+
+                    <RadioButton
+                        android:id="@+id/rblav14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:gravity="left"
+                        android:buttonTint="@color/colorPrimary"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="5"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:foregroundGravity="center_vertical|center"
+                    android:gravity="center|center_vertical"
+                    android:text="Lejía"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/imlav16"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="6"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav16"
+                    android:textOn="" />
+
+                <ImageView
+                    android:id="@+id/imlav17"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="6"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/lav17"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav18"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="6"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav18"
+                    android:textOn=""/>
+
+                <RadioGroup
+                    android:id="@+id/rglav6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="6"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:foregroundGravity="left"
+                        android:gravity="left"
+                        android:buttonTint="@color/colorPrimary"/>
+
+                    <RadioButton
+                        android:id="@+id/rblav17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:gravity="left"
+                        android:buttonTint="@color/colorPrimary"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="7"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:foregroundGravity="center_vertical|center"
+                    android:gravity="center|center_vertical"
+                    android:text="Secado"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/imlav19"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="8"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav19"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav20"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="8"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav20"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav21"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="8"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav21"
+                    android:textOn=""/>
+
+                <RadioGroup
+                    android:id="@+id/rglav7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="8"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:foregroundGravity="left"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imlav22"
+                    android:layout_width="62dp"
+                    android:layout_height="62dp"
+                    android:layout_row="9"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav22"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav23"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="9"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav23"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav24"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="9"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav24"
+                    android:textOn=""/>
+
+                <RadioGroup
+                    android:id="@+id/rglav8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="9"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:foregroundGravity="left"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imlav25"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="10"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav25"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav26"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="10"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav26"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav27"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="10"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav27_28"
+                    android:textOn=""/>
+
+                <RadioGroup
+                    android:id="@+id/rglav9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="10"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:foregroundGravity="left"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imlav29"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="11"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav29"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav30"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="11"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav30"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav31"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="11"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav31"
+                    android:textOn=""/>
+
+                <RadioGroup
+                    android:id="@+id/rglav10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="11"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:foregroundGravity="left"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imlav32"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="12"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav32"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav33"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="12"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav33"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav34"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="12"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav34"
+                    android:textOn=""/>
+
+                <RadioGroup
+                    android:id="@+id/rglav11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="12"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:foregroundGravity="left"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imlav35"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="13"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav35"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav36"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="13"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav36"
+                    android:textOn=""/>
+
+                <RadioGroup
+                    android:id="@+id/rglav12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_row="13"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:foregroundGravity="left"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="70dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="14"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:foregroundGravity="center_vertical|center"
+                    android:gravity="center|center_vertical"
+                    android:text="Planchado"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/imlav37"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="15"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav37"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav38"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="15"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav38"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav39"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="15"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav39"
+                    android:textOn=""/>
+
+                <RadioGroup
+                    android:id="@+id/rglav13"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_row="15"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:foregroundGravity="left"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav38"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imlav40"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="16"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav40"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav41"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="16"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav41"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav42"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="16"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav42"
+                    android:textOn=""/>
+
+                <RadioGroup
+                    android:id="@+id/rglav14"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_row="16"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav39"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:foregroundGravity="left"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imlav43"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="17"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav43"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav44"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="17"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav44"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav45"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="17"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav45"
+                    android:textOn=""/>
+
+                <RadioGroup
+                    android:id="@+id/rglav15"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_row="17"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:foregroundGravity="left"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav43"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav44"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="18"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:foregroundGravity="center_vertical|center"
+                    android:gravity="center|center_vertical"
+                    android:text="Limpieza en seco"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/imlav46"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="19"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav46"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav47"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="19"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav47"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav48"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="19"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav48"
+                    android:textOn=""/>
+
+                <RadioGroup
+                    android:id="@+id/rglav16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_row="19"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav45"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:foregroundGravity="left"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav46"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav47"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imlav49"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="20"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav49"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav50"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="20"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav50"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav51"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="20"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav51"
+                    android:textOn=""/>
+
+                <RadioGroup
+                    android:id="@+id/rglav17"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_row="20"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav48"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:foregroundGravity="left"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav49"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imlav52"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="21"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav52"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav53"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_row="21"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/lav53"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav54"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="21"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav54"
+                    android:textOn=""/>
+
+                <RadioGroup
+                    android:id="@+id/rglav18"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_row="21"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:foregroundGravity="left"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav52"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav53"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imlav55"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="22"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav55"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav56"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="22"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav56"
+                    android:textOn=""/>
+
+                <ImageView
+                    android:id="@+id/imlav57"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_row="22"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descripcion"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lav57"
+                    android:textOn=""/>
+
+                <RadioGroup
+                    android:id="@+id/rglav19"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_row="22"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rblav54"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:foregroundGravity="left"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav55"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+
+                    <RadioButton
+                        android:id="@+id/rblav56"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:buttonTint="@color/colorPrimary"
+                        android:gravity="left" />
+                </RadioGroup>
+
+
+            </GridLayout>
+
+            <ImageView
+                android:id="@+id/imageViewBorrar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/escoba" />
+
+            <TextView
+                android:id="@+id/textViewBorrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:text="Borrar selección"
+                android:textColor="#F8910707"
+                android:textSize="10sp"
+                app:fontFamily="sans-serif-smallcaps" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

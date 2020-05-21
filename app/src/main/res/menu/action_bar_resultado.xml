@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".vistas.Resultado">
+
+    <item
+        android:id="@+id/accion_guardar"
+        android:checkable="true"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="Guardar"
+        app:showAsAction="always"
+        android:theme="@style/myActionButtonStyle"/>
+    <item
+        android:id="@+id/accion_compartir"
+        android:icon="@android:drawable/ic_menu_share"
+        android:theme="@style/myActionButtonStyle"
+        android:title="Compartir"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/accion_correo"
+        android:icon="@drawable/mail3"
+        android:theme="@style/myActionButtonStyle"
+        android:title="Enviar por correo"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/accion_web"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Ver en la web"
+        android:theme="@style/myActionButtonStyle"/>
+
+</menu>
