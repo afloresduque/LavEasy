@@ -329,8 +329,7 @@ public class Resultado extends AppCompatActivity {
         sendIntent.setType("text/plain");
         String mensaje = "App útil para lavar correctamente:\n\n" +
                 getString(R.string.app_name)+
-                "\nhttps://play.google.com/store/apps/details?id=com.phuongpn.emptyfoldercleaner&hl=es_419";
-                //"\nLa app que te dice cómo lavar tus prendas";
+                "\n\nhttps://mega.nz/file/dNcghCCB#3eDI4nMsHR33Ilh7_3vCoJp7RHJRxHQg979k6qDUuj4";
 
         sendIntent.putExtra(Intent.EXTRA_TEXT, mensaje);
         //En API 26 aparece como título al compartir.
@@ -346,7 +345,7 @@ public class Resultado extends AppCompatActivity {
         //Descripcion del mensaje
         emailIntent.putExtra(Intent.EXTRA_TEXT, "Mira qué útil para lavar:\n\n" +
                 getString(R.string.app_name)+
-                "\nLa app que te dice cómo lavar tus prendas");
+                "\n\nhttps://mega.nz/file/dNcghCCB#3eDI4nMsHR33Ilh7_3vCoJp7RHJRxHQg979k6qDUuj4");
         startActivity(emailIntent);
     }
 

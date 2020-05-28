@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -273,6 +275,12 @@ public class Simbolos extends AppCompatActivity implements View.OnClickListener 
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.action_bar_simbolos, menu);
+        return true;
+    }
+
     /**
      * Este método crea un botón en el menú que permite ir a la actividad anterior
      * @return
@@ -288,6 +296,19 @@ public class Simbolos extends AppCompatActivity implements View.OnClickListener 
 
         //actionBar.setTitle(actionBar.getTitle()+" - Simbología");
         actionBar.setSubtitle("Elige los símbolos");
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem simbolos) {
+
+        switch (simbolos.getItemId()){
+            case R.id.accion_borrar:
+                borrarSeleccion();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(simbolos);
+        }
     }
 
     @Override
@@ -978,10 +999,7 @@ public class Simbolos extends AppCompatActivity implements View.OnClickListener 
              */
             case (R.id.textViewBorrar):
             case (R.id.imageViewBorrar):
-                borrarRadioGroups();
-                seleccionados.clear();
-                FancyToast.makeText(this,"Selección borrada", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS,false).show();
-
+                borrarSeleccion();
                 break;
 
 
@@ -1019,6 +1037,12 @@ public class Simbolos extends AppCompatActivity implements View.OnClickListener 
 
         }
 
+    }
+
+    private void borrarSeleccion() {
+        borrarRadioGroups();
+        seleccionados.clear();
+        FancyToast.makeText(this,"Selección borrada", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS,false).show();
     }
 
     private void borrarRadioGroups() {

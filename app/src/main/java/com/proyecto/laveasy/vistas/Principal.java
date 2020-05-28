@@ -91,13 +91,16 @@ public class Principal extends AppCompatActivity implements View.OnClickListener
         sendIntent.setType("text/plain");
         sendIntent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.app_name));
         String mensaje = "Mira qué app más útil para no equivocarte cuando laves tu ropa:\n\n" +
-                "LavEasy\n";
+                "LavEasy\n\n";
 
         //Comento la siguiente línea porque mi app no está en play store
         //mensaje = mensaje + "https://play.google.com/store/apps/details?id=" + getBaseContext().getPackageName();
 
         //Incluyo código de una app que sí está en play store
-        mensaje = mensaje + "https://play.google.com/store/apps/details?id=com.phuongpn.emptyfoldercleaner&hl=es_419";
+        //mensaje = mensaje + "https://play.google.com/store/apps/details?id=com.phuongpn.emptyfoldercleaner&hl=es_419";
+
+        //Se decide incluir el enlace a la apk subida a MEGA, para poder descargarla.
+        mensaje = mensaje + "https://mega.nz/file/dNcghCCB#3eDI4nMsHR33Ilh7_3vCoJp7RHJRxHQg979k6qDUuj4";
 
         sendIntent.putExtra(Intent.EXTRA_TEXT, mensaje);
         //En API 26 aparece como título al compartir.
