@@ -18,6 +18,10 @@ public class SplashScreen extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_splash_screen);
 
+        /**
+         * Lanzamos un objeto Runnable que lanzará la clase de la pantalla principal tras
+         * un periodo de retraso establecido
+         */
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -27,6 +31,5 @@ public class SplashScreen extends AppCompatActivity {
             }
         },4000);
     }
-
 }
 

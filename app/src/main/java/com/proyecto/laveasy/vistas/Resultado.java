@@ -17,7 +17,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
 import androidx.appcompat.app.ActionBar;
@@ -31,11 +30,6 @@ import com.proyecto.laveasy.R;
 import com.proyecto.laveasy.SimboloO;
 import com.proyecto.laveasy.Utilidades;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -55,28 +49,25 @@ import java.util.Locale;
 
 public class Resultado extends AppCompatActivity {
 
-    HttpClient httpClient = new DefaultHttpClient(); //para REST
     RecyclerView recyclerSimbolos;
     AdaptadorSimbolos adapter;
     ArrayList<SimboloO> listaSimbolos = new ArrayList<>();
     ArrayList<Integer> seleccionados = new ArrayList<>();
-    boolean encontrado = false;
     String prenda=" ";
 
-    //directorio donde se va a guardar la foto
+    //Directorio donde se va a guardar la foto al capturar pantalla
     private final String CARPETA_RAIZ="/misCapturas_LavEasy/";
     private final String RUTA_IMAGEN=CARPETA_RAIZ+"misCapturas";
     String path="";
 
     //Necesario pedirlos a partir de la API 23
-    private static final int REQUEST_EXTERNAL_STORAGE = 1;
-    private static String[] PERMISSIONS_STORAGE = {
+    private static final int SOLICITAR_ALMACENAMIENTO_EXTERNO = 1;
+    private static String[] PERMISOS_ALMACENAMIENTO = {
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
 
     protected void onCreate(Bundle savedInstanceState) {
-        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultado);
 
@@ -87,11 +78,7 @@ public class Resultado extends AppCompatActivity {
         prenda = getIntent().getStringExtra("prenda");
 
         if (seleccionados.isEmpty()) {
-            // Log.d("encontrado", String.valueOf(encontrado));
-            //Log.d("encontrado", String.valueOf(listaSimbolos.size()));
             FancyToast.makeText(this, "No ha seleccionado ningún símbolo", FancyToast.LENGTH_SHORT, FancyToast.INFO,false).show();
-            //finish();
-
         }
 
 
@@ -110,24 +97,29 @@ public class Resultado extends AppCompatActivity {
         }else{
             onSupportNavigateUp();
         }
-
     }
 
+    /**
+     * Método que comprueba si tenemos permiso de almacenamiento, para solicitarlo en caso contrario
+     * @param activity
+     */
     public static void verifyStoragePermissions(Activity activity) {
-        // Check if we have write permission
+        // Comprueba si tenemos permisos
         int permission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
         if (permission != PackageManager.PERMISSION_GRANTED) {
-            // We don't have permission so prompt the user
+            // Si no los tenemos, los pide al usuario
             ActivityCompat.requestPermissions(
                     activity,
-                    PERMISSIONS_STORAGE,
-                    REQUEST_EXTERNAL_STORAGE
+                    PERMISOS_ALMACENAMIENTO,
+                    SOLICITAR_ALMACENAMIENTO_EXTERNO
             );
         }
     }
 
-    /*private void validaPermisos() {
+    /*
+    OTRA OPCION DE VALIDAR
+    private void validaPermisos() {
 
             if(Build.VERSION.SDK_INT<Build.VERSION_CODES.M){
             }
@@ -141,9 +133,12 @@ public class Resultado extends AppCompatActivity {
             }
 
     }*/
-/*
 
+
+      /*
       Método para corregir los fallos por la vulnerabilidad de SSL
+
+      ****INNECESARIO A PARTIR DE CIERTA API****
 
     private void upgradeSecurityProvider() {
         try {
@@ -156,9 +151,6 @@ public class Resultado extends AppCompatActivity {
                 | NoSuchAlgorithmException | KeyManagementException e) {
             e.printStackTrace();
         }
-
-
-
         try {
             ProviderInstaller.installIfNeeded(this);
         } catch (GooglePlayServicesRepairableException e) {
@@ -166,9 +158,6 @@ public class Resultado extends AppCompatActivity {
         } catch (GooglePlayServicesNotAvailableException e) {
             e.printStackTrace();
         }
-
-
-
          ProviderInstaller.installIfNeededAsync(this, new ProviderInstaller.ProviderInstallListener() {
             @Override
             public void onProviderInstalled() {
@@ -190,10 +179,12 @@ public class Resultado extends AppCompatActivity {
         return false;
     }
 
+    /**
+     * Método que permite personalizar la barra de subtítulo según si venimos de leer QR, de
+     * seleccionar los símbolos o de elegir la prenda, respectivamente
+     */
     private void customizaActionBar() {
         ActionBar actionBar = getSupportActionBar();
-
-        //actionBar.setTitle(actionBar.getTitle()+" - Simbología");
 
         if(prenda.equals(" ")){
             actionBar.setSubtitle("¿Qué debo hacer?");
@@ -206,16 +197,26 @@ public class Resultado extends AppCompatActivity {
         }
     }
 
+    /**
+     * Referenciamos la barra de menú superior
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.action_bar_resultado, menu);
         return true;
     }
 
+    /**
+     * Método que gestiona la opción clicada del menú superior
+     * @param icono
+     * @return
+     */
     @Override
-    public boolean onOptionsItemSelected(MenuItem simbolos) {
+    public boolean onOptionsItemSelected(MenuItem icono) {
 
-        switch (simbolos.getItemId()){
+        switch (icono.getItemId()){
             case R.id.accion_guardar:
                 comprobar();
                 return true;
@@ -234,31 +235,28 @@ public class Resultado extends AppCompatActivity {
                 return true;
 
             default:
-                return super.onOptionsItemSelected(simbolos);
+                return super.onOptionsItemSelected(icono);
         }
     }
 
+    /**
+     * Método que lanza un diálogo de decisión al clicar guardar
+     */
     private void comprobar() {
-        //CharSequence[] opciones={"Guardar","Cancelar"};
         AlertDialog.Builder alertOpciones=new AlertDialog.Builder(this);
         alertOpciones.setMessage("¿Seguro que quiere guardar el resultado?")
                 .setCancelable(false)
                 .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-
                         dialogInterface.dismiss();
                         noGuardar();
-
                     }
                 })
-
                 .setPositiveButton("Guardar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-
                         guardar();
-
                     }
                 });
         alertOpciones.show();
@@ -270,40 +268,37 @@ public class Resultado extends AppCompatActivity {
 
     private void guardar() {
         verifyStoragePermissions(this);
-        Log.d("perisos", String.valueOf(ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)));
-        Log.d("perisos", String.valueOf(PackageManager.PERMISSION_GRANTED));
+        // Obtenemos la hora y fecha actual para establecerla como nombre de archivo
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_hhmm", Locale.getDefault());
         Date date = new Date();
         String fecha = dateFormat.format(date);
 
         try {
 
-            //este file es para crear la ruta
+            // Obtenemos la ruta de la imagen
             File fileImagen = new File(Environment.getExternalStorageDirectory(),RUTA_IMAGEN);
 
+            // Comprobamos si existe la ruta
             boolean isCreada = fileImagen.exists();
-            Log.d("llega", String.valueOf(fileImagen.exists()));
             String nombreImagen="";
 
-            //Para que tenga en cuenta si la ruta estaba creada o no
+            // Si no existe la ruta, la crea
             if(!isCreada){
                 isCreada = fileImagen.mkdirs();
-                Log.d("llega", String.valueOf(fileImagen.exists()));
             }
 
             if(isCreada){
                 nombreImagen = (fecha) + ".jpg";
-                //nombreImagen = (System.currentTimeMillis()/1000) + ".jpg";
             }
 
             path = Environment.getExternalStorageDirectory() + File.separator +
                     RUTA_IMAGEN + File.separator + nombreImagen;
 
-            //este file es para crear el propio archivo
+            // Creará el archivo en la ruta establecida
             File imagen = new File(path);
 
 
-            // create bitmap screen capture
+            // Crea un Bitmap con la captura de pantalla
             View v1 = getWindow().getDecorView().getRootView();
             v1.setDrawingCacheEnabled(true);
             Bitmap bitmap = Bitmap.createBitmap(v1.getDrawingCache());
@@ -317,13 +312,15 @@ public class Resultado extends AppCompatActivity {
 
             FancyToast.makeText(this,"Captura guardada en\n'misCapturas_LavEasy'", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS,false).show();
 
-
         } catch (Throwable e) {
-            // Several error may come out with file handling or DOM
             e.printStackTrace();
         }
     }
 
+    /**
+     * Método que lanza las opciones de compartir de que dispone el dispositivo.
+     * En este caso, se predefine el mensaje a enviar, aunque puede ser modificado.
+     */
     private void compartir() {
         Intent sendIntent = new Intent(Intent.ACTION_SEND);
         sendIntent.setType("text/plain");
@@ -332,17 +329,21 @@ public class Resultado extends AppCompatActivity {
                 "\n\nhttps://mega.nz/file/dNcghCCB#3eDI4nMsHR33Ilh7_3vCoJp7RHJRxHQg979k6qDUuj4";
 
         sendIntent.putExtra(Intent.EXTRA_TEXT, mensaje);
-        //En API 26 aparece como título al compartir.
+        // En API 26, la siguiente línea aparece como título al compartir.
         Intent shareIntent = Intent.createChooser(sendIntent, "Info de lavado: ");
         startActivity(shareIntent);
     }
 
+    /**
+     * Método que lanza las opciones de enviar por correo de que dispone el dispositivo.
+     * En este caso, se predefine el mensaje a enviar, aunque puede ser modificado.
+     */
     private void enviarCorreo() {
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
         emailIntent.setData(Uri.parse("mailto:"));
-        //Asunto del mensaje
+        // Asunto del mensaje
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Ya puedo lavar mi ropa sin miedo");
-        //Descripcion del mensaje
+        // Descripción del mensaje
         emailIntent.putExtra(Intent.EXTRA_TEXT, "Mira qué útil para lavar:\n\n" +
                 getString(R.string.app_name)+
                 "\n\nhttps://mega.nz/file/dNcghCCB#3eDI4nMsHR33Ilh7_3vCoJp7RHJRxHQg979k6qDUuj4");
@@ -354,7 +355,7 @@ public class Resultado extends AppCompatActivity {
      */
     private void construirRecycler() {
 
-        //Vinculo el recycler de la interfaz
+        // Vinculo el recycler de la interfaz
         recyclerSimbolos = findViewById(R.id.RecyclerId);
         recyclerSimbolos.setLayoutManager(new LinearLayoutManager(this));
 
@@ -363,47 +364,54 @@ public class Resultado extends AppCompatActivity {
         obtenerLaLista();
     }
 
+    /**
+     * Método que instancia un objeto de la clase ConseguirTodosSimbolos
+     * Esta clase AsyncTask nos permite consultar la base de datos de pythonanywhere y obtener
+     * la información en objetos de formato JSON.
+     * A partir de ahí, comprobamos y si nos interesa cada objeto, lo almacenamos en ArrayList
+     */
     private void obtenerLaLista() {
 
         //OPCION 1
-        //Se obtienen todos, se comparan, se lanza al adapter
+        //Se obtienen todos, se comparan con la selección, se lanza al adapter
         ConseguirTodosSimbolos selecSimbolos = new ConseguirTodosSimbolos(this);
         selecSimbolos.execute();
 
 
-        //OPCION 2
-        //Se consultan de uno en uno los seleccionados y se añaden a la lista
-        /*
+        /*OPCION 2
+         *Se consultan de uno en uno los seleccionados y se añaden a la lista
+
          ObtenSimbolo selecSimbolos2 = new ObtenSimbolo(this);
 
          for(int s = 0; s < seleccionados.size(); s++ ){
             selecSimbolos2.execute(seleccionados.get(s));
-
          }
-
         adapter.setListaSimbolos(listaSimbolos);
         adapter.notifyDataSetChanged();
         */
 
     }
 
-    //************
-    //OPCION 1
-    //Se consultan todos
-    //Cuando se tenga un objeto json, comprobar con un for con los seleccionados
-    //************
-
+    /*************
+    /*OPCION 1
+      Se consultan todos los objetos de la bdd
+      Cuando se tenga un objeto json, comprobar con un for con los seleccionados, si es de los que
+      nos interesa, se incluye a la lista de elementos a mostrar
+     */
+    /************/
     private class ConseguirTodosSimbolos extends AsyncTask<String, Integer, ArrayList<SimboloO>> {
 
         ProgressDialog pdialog;
         Context context;
         int response_code = 0;
 
-
         public ConseguirTodosSimbolos(Context context){
             this.context = context;
         }
 
+        /**
+         * Mostramos mensaje informativo de progreso en diálogo
+         */
         @Override
         protected void onPreExecute() {
             pdialog = new ProgressDialog(context);
@@ -423,25 +431,23 @@ public class Resultado extends AppCompatActivity {
         protected ArrayList<SimboloO> doInBackground(String... strings) {
             String strRespuesta= "";
             ArrayList<SimboloO> listResultante = new ArrayList<>();
-            //listResultante.add(new SimboloO(0, "Cargando...",null));
 
             try {
+                // Abrimos la conexión a la url de la bdd en el servidor de python
                 URL url = new URL(Utilidades.DIRECCION_REST_PYTHON + Utilidades.POST_GET_ALL);
                 HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
                 conexion.setDoInput(true);
+                // Queremos consultar, por lo que indicamos GET
                 conexion.setRequestMethod("GET");
                 conexion.setRequestProperty("Content-Type", "application/json");
                 response_code = conexion.getResponseCode();
-                Log.e("code", String.valueOf(response_code));
-
 
                 publishProgress(20);
 
-
-                //Si obtiene respuesta correcta
+                // Si obtiene respuesta correcta
                 if (response_code == HttpURLConnection.HTTP_OK) {
 
-                    //Extraemos la respuesta del servidor
+                    // Extraemos la respuesta del servidor y almacenamos en buffer
                     String linea;
                     BufferedReader br = new BufferedReader(new InputStreamReader(conexion.getInputStream()));
                     while ((linea=br.readLine()) != null) {
@@ -450,22 +456,27 @@ public class Resultado extends AppCompatActivity {
 
                     publishProgress(40);
 
+                    // Creamos un array de JSONs con la respuesta completa del servidor
                     JSONArray jsonArray = new JSONArray(strRespuesta);
 
                     SimboloO simbolo = null;
 
                     publishProgress(60);
 
+                    // Extraemos cada posición del array y almacenamos en objeto JSON
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject JSONobj = jsonArray.getJSONObject(i);
 
+                        // Buscamos por cada objeto si se encuentra entre los seleccionados
                         for (int j = 0; j < seleccionados.size(); j++){
+
+                            // Comparamos sus id
                             Integer idJson = JSONobj.getInt("id");
 
+                            // Si nos interesa, lo añadimos a la lista que se mandará al adaptador
                             if(seleccionados.get(j) == idJson){
                                 simbolo = new SimboloO(JSONobj.getInt("id"), JSONobj.getString("nombre"), JSONobj.getString("descripcion"));
                                 listResultante.add(simbolo);
-
                                 break;
                             }
                         }
@@ -508,6 +519,7 @@ public class Resultado extends AppCompatActivity {
         protected void onPostExecute(ArrayList<SimboloO> simbolos) {
             super.onPostExecute(simbolos);
             listaSimbolos = simbolos;
+            // Tras toda la consulta, añadimos la lista de resultado al adaptador
             adapter.setListaSimbolos(listaSimbolos);
             adapter.notifyDataSetChanged();
             pdialog.dismiss();
@@ -519,7 +531,6 @@ public class Resultado extends AppCompatActivity {
     //OPCION 2
     //Se va a obtener de una en una las veces que seleccionados haya y se añade a la listaSimbolos
     //************
-
     /*
     private class ObtenSimbolo extends AsyncTask<Integer, Integer, SimboloO> {
 
@@ -589,7 +600,6 @@ public class Resultado extends AppCompatActivity {
             pdialog.dismiss();
         }
     }*/
-
 }
 
 
